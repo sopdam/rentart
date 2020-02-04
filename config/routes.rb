@@ -26,9 +26,13 @@ Rails.application.routes.draw do
     resources :arts, only:  [ :index, :new, :create ]
   end
   resources :arts, only:  [ :show, :edit, :update, :destroy ] do
-    resources :bookings, only:  [ :show, :new, :create, :edit, :update ] do
-      resources :reviews, only:  [ :index, :new, :create ]
-    end
+    resources :bookings, only:  [:new, :create]
   end
+
+  resources :bookings, only: [:show, :edit, :update] do
+    resources :reviews, only:  [ :new, :create ]
+  end
+
+  resources :reviews, only: :index
 
 end
