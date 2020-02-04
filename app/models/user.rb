@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :arts
   has_many :arts, through: :bookings
+  validates :email, uniqueness: true, presence: true
+  validates :password, presence: true
 end
