@@ -7,4 +7,5 @@ class Art < ApplicationRecord
   validates :price, presence: true
   validates :dimensions, presence: true
   validates :city, presence: true
+  has_one_attached :photo
 end
