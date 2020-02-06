@@ -17,7 +17,7 @@ class ArtsController < ApplicationController
     @art = Art.new(art_params)
     authorize @art
     if @art.save
-      redirect_to arts_show_path(@art)
+      redirect_to art_path(@art)
     else
       render :new
     end
@@ -32,14 +32,14 @@ class ArtsController < ApplicationController
     @art = Art.find(params[:id])
     authorize @art
     @art.update(art_params)
-    redirect_to arts_show_path(@art)
+    redirect_to art_path(@art)
   end
 
   def destroy
     @art = Art.find(params[:id])
     authorize @art
     @art.destroy
-    redirect_to arts_index_path
+    redirect_to arts_path
   end
 
   private
