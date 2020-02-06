@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def show
     @booking = Booking.find(params[:id])
     @review = Review.new
@@ -14,7 +16,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(params[:id])
     authorize @booking
     if @booking.save
-      redirect_to bookings_show_path(@booking)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
@@ -29,7 +31,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     authorize @booking
     @booking.update(booking_params)
-    redirect_to bookings_show_path(@booking)
+    redirect_to booking_path(@booking)
   end
 
   private

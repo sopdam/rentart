@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def new
     @review = Review.new
     @review.booking = Booking.find(params[:booking_id])
@@ -12,7 +14,7 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     authorize @review
     if @review.save
-      redirect_to bookings_show_path(@booking)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
