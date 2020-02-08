@@ -1,6 +1,5 @@
-          <!-- to fix, we need to iterate, as we have many reviews -->
-          <% if art.rating == nil? %>
-            <p>-</p>
-          <% else %>
-            <p><%= art.rating %></p>
-          <% end %>
+<!-- to fix, we need to iterate, as we have many reviews -->
+<% if art.bookings.first.rating.nil? %>
+  <p>-</p>
+<% else %>
+  <p><%=  art.bookings.first.rating %></p>

@@ -6,12 +6,12 @@
        <!-- cl_image_path art.photo -->
       <% else %>
         <!-- Destroy the photo -->
-        @art.photo.purge
         <% background_url = 'https://source.unsplash.com/500x400/?sculpture' %>
       <% end %>
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
         <h2><%= art.title %></h2>
         <div class="card-rating">
+          <p>-</p>
         </div>
         <%= link_to "", art_path(art), class: 'card-link' %>
       </div>
