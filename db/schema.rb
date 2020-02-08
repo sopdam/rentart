@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_08_130123) do
+ActiveRecord::Schema.define(version: 2020_02_08_143930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,11 +45,10 @@ ActiveRecord::Schema.define(version: 2020_02_08_130123) do
     t.float "longitude"
     t.float "latitude"
     t.string "dimensions"
-    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "booking_id"
-    t.index ["booking_id"], name: "index_arts_on_booking_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_arts_on_user_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -59,6 +58,8 @@ ActiveRecord::Schema.define(version: 2020_02_08_130123) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "review_id"
+    t.bigint "art_id"
+    t.index ["art_id"], name: "index_bookings_on_art_id"
     t.index ["review_id"], name: "index_bookings_on_review_id"
   end
 
@@ -80,17 +81,15 @@ ActiveRecord::Schema.define(version: 2020_02_08_130123) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.bigint "art_id"
     t.bigint "booking_id"
-    t.index ["art_id"], name: "index_users_on_art_id"
     t.index ["booking_id"], name: "index_users_on_booking_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "arts", "bookings"
+  add_foreign_key "arts", "users"
+  add_foreign_key "bookings", "arts"
   add_foreign_key "bookings", "reviews"
-  add_foreign_key "users", "arts"
   add_foreign_key "users", "bookings"
 end

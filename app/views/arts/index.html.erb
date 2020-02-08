@@ -3,7 +3,9 @@
     <div class="banner-content">
       <h1>Rent art</h1>
       <p>Make your home unique.</p>
-      <% if @user == nil %>
+      <% if user_signed_in? %>
+        <%= link_to "Add art", new_art_path , class: "btn-banner" %>
+      <% else %>
         <%= link_to "Rent now", new_user_registration_path , class: "btn-banner" %>
       <% end %>
     </div>

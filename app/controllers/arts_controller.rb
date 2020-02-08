@@ -26,8 +26,10 @@ class ArtsController < ApplicationController
 
   def create
     @art = Art.new(art_params)
+    @art.user = current_user
     authorize @art
-    if @art.save
+
+    if @art.save!
       redirect_to art_path(@art)
     else
       render :new
@@ -56,6 +58,6 @@ class ArtsController < ApplicationController
   private
 
   def art_params
-    params.require(:art).permit(:title, :artist, :description, :price, :city, :longitude, :latitude, :dimensions, :photo)
+    params.require(:art).permit(:user_id, :title, :artist, :description, :price, :city, :longitude, :latitude, :dimensions, :photo, :rating)
   end
 end

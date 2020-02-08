@@ -1,7 +1,7 @@
 class Art < ApplicationRecord
   # belongs_to :user
   has_many :bookings
-  has_one_attached :picture
+  has_many :reviews, through: :bookings
   validates :title, presence: true
   validates :artist, presence: true
   validates :price, presence: true
