@@ -3,6 +3,14 @@ class ArtsController < ApplicationController
 
   def index
     @arts = policy_scope(Art)
+    @arts = Art.geocoded #returns arts with coordinates
+
+    @markers = @arts.map do |art|
+      {
+        lat: art.latitude,
+        lng: art.longitude
+      }
+    end
   end
 
   def show
