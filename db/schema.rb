@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2020_02_08_143930) do
     t.float "longitude"
     t.float "latitude"
     t.string "dimensions"
-    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"

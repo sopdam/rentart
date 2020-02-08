@@ -1,14 +1,8 @@
 <div class="cards">
   <% @arts.each do |art| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-      <% if art.photo.attached? %>
-        <% background_url = art.photo %>
-       <!-- cl_image_path art.photo -->
-      <% else %>
-        <!-- Destroy the photo -->
-        <% background_url = 'https://source.unsplash.com/500x400/?sculpture' %>
-      <% end %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= background_url %>');">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path art.photo.key, crop: :fill if art.photo.attached? %>')">
+
+      <div class="card" >
         <h2><%= art.title %></h2>
         <div class="card-rating">
           <p>-</p>

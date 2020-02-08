@@ -5,7 +5,6 @@ class ArtPolicy < ApplicationPolicy
     end
   end
 
-
   def show?
     true
   end
