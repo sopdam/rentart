@@ -19,7 +19,8 @@ class ArtsController < ApplicationController
     @art = Art.new(art_params)
     @art.user = current_user
     authorize @art
-    if @art.save
+
+    if @art.save!
       redirect_to art_path(@art)
     else
       render :new
