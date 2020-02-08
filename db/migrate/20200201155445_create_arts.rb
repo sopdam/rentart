@@ -10,6 +10,7 @@ class CreateArts < ActiveRecord::Migration[5.2]
       t.float :latitude
       t.string :dimensions
       t.string :picture
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

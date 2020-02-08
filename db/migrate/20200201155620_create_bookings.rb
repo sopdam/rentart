@@ -4,6 +4,8 @@ class CreateBookings < ActiveRecord::Migration[5.2]
       t.date :start_date
       t.date :end_date
       t.boolean :confirmation
+      t.references :user, foreign_key: true
+      t.references :art, foreign_key: true
 
       t.timestamps
     end
