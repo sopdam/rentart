@@ -2,6 +2,10 @@
   justify-content: space-between;
   background: white;
 }
+.navbar-expand-sm {
+  display: flex;
+  justify-content: space-between !important;
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -10,3 +14,4 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
