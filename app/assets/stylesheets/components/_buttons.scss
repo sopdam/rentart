@@ -1,0 +1,50 @@
+// $main-yellow: #FAED26;
+// $dark-purple: #46344E;
+// $grey-purple: #5A5560;
+// $grey-red: #9D8D8F;
+// $grey-orange: #9B786F;
+// $grey-white: #EFEFEF;
+
+.btn-banner {
+  color: $grey-purple;
+  font-size: 18px;
+  // font-weight: bold;
+  background-color: $main-yellow;
+  border: 2px solid $main-yellow;
+  padding: 8px 24px;
+  border-radius: 50px;
+  // font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+  // font-family: 'Abel', serif;
+}
+
+.btn-banner:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: $grey-purple;
+  font-weight: bold;
+}
+
+.btn-navigation {
+  color: $grey-purple;
+  font-size: 12px;
+  // font-weight: bold;
+  background-color: $main-yellow;
+  border: 2px solid $main-yellow;
+  padding: 8px 24px;
+  border-radius: 50px;
+  // font-weight: lighter;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-weight: bold;
+  // font-family: 'Abel', serif;
+}
+
+.btn-navigation:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: $grey-purple;
+  font-weight: bold;
+}

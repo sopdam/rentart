@@ -1,2 +1,35 @@
-<h1>Arts#show</h1>
-<p>Find me in app/views/arts/show.html.erb</p>
+<div class="container">
+  <h1><%= @art.title %></h1>
+  <h1><%= @art.artist %></h1>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <p class="price-show"><strong>£<%= @art.price %></strong></p>
+      <p><%= @art.dimensions %></p>
+      <% if @art.description.nil? == false %></p>
+        <p><%= @art.description %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <h3>Reviews</h3>
+  <% if @art.bookings.empty? %>
+    <p>This piece of art hasn't been rented yet.</p>
+  <% else %>
+    <ul class="list-group">
+      <% @art.bookings.reviews.each do |review| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-primary badge-pill">
+            <% counter = 0 %>
+            <% 5.times do %>
+              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <% counter += 1 %>
+            <% end %>
+          </span>
+          <%= review.description %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <%= link_to "Edit", arts_path , class: "btn-navigation" %>
+  <%= link_to "Delete", arts_path , class: "btn-navigation" %>
+</div>
