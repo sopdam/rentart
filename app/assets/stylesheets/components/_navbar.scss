@@ -7,6 +7,14 @@
   justify-content: space-between !important;
 }
 
+.form-group {
+  display: flex;
+}
+
+.nav-item {
+  height: 38px;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
