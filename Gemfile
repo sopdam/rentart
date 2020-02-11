@@ -18,6 +18,7 @@ gem 'webpacker'
 gem 'pundit'
 gem 'geocoder'
 gem 'cloudinary', '~> 1.12.0'
+gem "algoliasearch-rails"
 
 
 group :development do

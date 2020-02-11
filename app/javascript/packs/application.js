@@ -4,3 +4,4 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 import { initMapbox } from './map.js';
 
 initMapbox();
+
