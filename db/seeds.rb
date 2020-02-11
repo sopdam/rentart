@@ -10,9 +10,6 @@ puts "creating seed"
 # User.destroy_all
 # Art.destroy_all
 
-
-puts 'creating user'
-
 User.create!(
   encrypted_password: "123",
   email: "h@h.com")
@@ -56,7 +53,3 @@ Art.create!(
   dimensions: '35cm x 55cm',
   user_id: 3
 )
-
-
-
-puts "seed ended"
