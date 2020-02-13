@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-new-edit">
   <%= simple_form_for @art do |f| %>
     <%= f.input :title %>
     <%= f.input :artist %>
@@ -6,7 +6,9 @@
     <%= f.input :dimensions %>
     <%= f.input :city %>
     <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
+  <div class="form-button">
+    <%= f.input :photo, as: :file, label: "" %>
+  </div>
     <%= f.submit "Save", class: "btn-navigation" %>
   <% end %>
 </div>
