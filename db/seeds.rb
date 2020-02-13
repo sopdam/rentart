@@ -32,6 +32,7 @@ Art.create!(
   city: 'Le Louvre, Paris',
   dimensions: '40cm x 50cm',
   user_id: 1
+  photo: 'https://unsplash.com/photos/CdebKdGj4FY'
   )
 
 Art.create!(
@@ -42,14 +43,16 @@ Art.create!(
   city: 'Amsterdam',
   dimensions: '35cm x 35cm',
   user_id: 2
+  photo: 'https://unsplash.com/photos/nbQmZk_rs8c'
 )
 
 Art.create!(
-  title: 'Guernica',
-  artist: 'Pablo Picasso',
-  description: 'Cubist representation of the Guernica battle',
+  title: 'Girl with a pearl earring',
+  artist: 'Johannes Vermeer',
+  description: 'It became known by its present title towards the end of the 20th century after the large pearl earring worn by the girl portrayed there',
   price: '40000',
-  city: '65 Alfred Road',
+  city: 'The Hague',
   dimensions: '35cm x 55cm',
   user_id: 3
+  photo: 'https://unsplash.com/photos/2PH-i6QYMhA'
 )
