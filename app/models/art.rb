@@ -13,10 +13,10 @@ class Art < ApplicationRecord
 
   after_save :load_algolia
 
-  include AlgoliaSearch
-  algoliasearch do
-    attributes :city, :title, :artist, :price
-  end
+  # include AlgoliaSearch
+  # algoliasearch do
+  #   attributes :city, :title, :artist, :price
+  # end
 
   private
 
@@ -25,4 +25,3 @@ class Art < ApplicationRecord
     index.add_object(self)
   end
 end
-
