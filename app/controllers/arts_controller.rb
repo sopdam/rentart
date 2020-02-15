@@ -9,7 +9,7 @@ class ArtsController < ApplicationController
         lat: art.latitude,
         lng: art.longitude,
         infoWindow: render_to_string(partial: "/arts/info_window", locals: { art: art }),
-        image_url: helpers.asset_url('logo.png')
+        image_url: helpers.asset_url('palette.png')
       }
     end
   end
