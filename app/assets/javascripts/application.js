@@ -19,7 +19,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
 
       content.hits.forEach((hit) => {
         const card = `<a href="/arts/${hit.id}">
-              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://res.cloudinary.com/dwq7tkx6b/image/upload/c_fill/eCTqTJ4jy8inCmDuPsk2jTWe')">
+              <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/flagged/photo-1572392640988-ba48d1a74457?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2160&q=80')">
                   <h2>${hit.title}</h2>
               </div>
               </a>`

@@ -3,16 +3,17 @@
   height: 500px;
   // background: white;
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  // padding-left: 30px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
 }
 
 .show-picture {
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
 
 .show-picture img {
@@ -28,7 +29,7 @@
 
 .show-box-info h1 {
   font-size: 60px;
-  padding-left: 30px;
+  padding: 30px 0 0 30px;
 }
 
 .show-box-info h2 {
