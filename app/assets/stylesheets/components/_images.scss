@@ -1,0 +1,36 @@
+.show-box {
+  overflow: hidden;
+  height: 500px;
+  // background: white;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+}
+
+.show-picture {
+  height: 100%;
+  width: 50%;
+}
+
+.show-picture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.show-box-info {
+  padding-right: 16px;
+}
+
+.show-box-info h1 {
+  font-size: 60px;
+}
+
+.show-box-info h2 {
+  font-size: 35px;
+}
+
+.show-box-info p {
+  font-size: 18px;
+}
