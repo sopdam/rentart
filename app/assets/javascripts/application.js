@@ -4,8 +4,8 @@
 
 document.querySelector("form").addEventListener("submit", (event) => {
   event.preventDefault();
-  var client = algoliasearch('EEEFDSJJ4C','9fa6e18dbe000ebeb8d06b080876ecec');
-  var index = client.initIndex('Rentart');
+  const client = algoliasearch('EEEFDSJJ4C','9fa6e18dbe000ebeb8d06b080876ecec');
+  const index = client.initIndex('Rentart');
   const searchInput = document.getElementById('search_query').value;
   // console.log(searchInput)
   index.search(searchInput, { hitsPerPage: 10, page: 0, restrictSearchableAttributes: [
