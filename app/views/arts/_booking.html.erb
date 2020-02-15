@@ -1,0 +1,6 @@
+
+<%= simple_form_for [@art, @booking] do |f| %>
+  <%= f.text_field :start_date, class: 'form-control',  data:{ provide:'datepicker' } %>
+  <%= f.text_field :end_date, class: 'form-control',  data:{ provide:'datepicker' } %>
+  <%= f.submit "Rent", class: "btn btn-create" %>
+<% end %>

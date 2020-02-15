@@ -16,6 +16,9 @@ class ArtsController < ApplicationController
 
   def show
     @art = Art.find(params[:id])
+    @booking = @art.bookings.where(user: current_user).last
+    # @review = Review.new
+    # authorize @booking
     authorize @art
   end
 
