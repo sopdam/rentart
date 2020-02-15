@@ -22,4 +22,33 @@
     </div>
   </div>
 
+  <% if @art.description.nil? == false %></p>
+    <p><%= @art.description %></p>
+  <% end %>
+  <p>Dimensions: <%= @art.dimensions %></p>
+
+  <h3>Reviews</h3>
+  <% if @art.bookings.empty? %>
+    <p>This piece of art hasn't been rented yet.</p>
+  <% else %>
+    <ul class="list-group">
+      <% @art.bookings.reviews.each do |review| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span class="badge badge-primary badge-pill">
+            <% counter = 0 %>
+            <% 5.times do %>
+              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <% counter += 1 %>
+            <% end %>
+          </span>
+          <%= review.description %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="lined-buttons">
+    <%= link_to "Edit", edit_art_path , class: "btn-navigation" %>
+    <%= link_to "Delete", art_path(@art), class: "btn-navigation", method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+    <!-- <a class="btn-navigation">Delete</a> -->
 </div>
