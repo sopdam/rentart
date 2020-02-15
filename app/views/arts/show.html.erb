@@ -1,15 +1,26 @@
 <div class="container">
-  <h1><%= @art.title %></h1>
-  <h1><%= @art.artist %></h1>
-  <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <p class="price-show"><strong>£<%= @art.price %></strong></p>
-      <p><%= @art.dimensions %></p>
-      <% if @art.description.nil? == false %></p>
-        <p><%= @art.description %></p>
-      <% end %>
+  <div class="show-box">
+
+    <div class="show-box-info">
+      <h1><%= @art.title %></h1>
+      <h2><%= @art.artist %></h2>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <p class="price-show">Price per month: £<%= @art.price %></p>
+        </div>
+      </div>
     </div>
+
+    <div class="show-picture">
+      <img src="<%= cl_image_path @art.photo.key, crop: :fill if @art.photo.attached? %>" alt="<%= @art.title %>">
+    </div>
+
   </div>
+
+  <% if @art.description.nil? == false %></p>
+    <p><%= @art.description %></p>
+  <% end %>
+  <p>Dimensions: <%= @art.dimensions %></p>
 
   <h3>Reviews</h3>
   <% if @art.bookings.empty? %>
