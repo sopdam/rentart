@@ -10,18 +10,24 @@
       <% end %>
     </div>
   </div>
-<%= render "cards" %>
-</div>
 
-<h1>Here</h1>
 
-<div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  data-markers="<%= @markers.to_json %>"
-></div>
+  <div class="card-map-division">
 
-  <!-- class="mapboxgl-popup" -->
+    <div class="cart-subdivision">
+      <%= render "cards" %>
+    </div>
+
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      data-markers="<%= @markers.to_json %>"
+    ></div>
+
+  </div>
+
+ </div> <!-- class="mapboxgl-popup" -->
+
 
