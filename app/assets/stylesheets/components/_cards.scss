@@ -39,6 +39,22 @@
   color: $main-yellow;
 }
 
+.cards a {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.cards a:hover {
+ border-bottom: 1px solid white;
+ text-decoration: none;
+}
+
+.cards a:hover h2 {
+ border-bottom: 1px solid white;
+ text-decoration: none;
+}
+
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
