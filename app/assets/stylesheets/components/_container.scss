@@ -45,6 +45,14 @@
   }
 }
 
+.container-show {
+  overflow: hidden;
+  height: 500px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
 // input[type=file] {
 //   //opacity: .8;
 // }

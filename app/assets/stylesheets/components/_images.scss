@@ -5,7 +5,9 @@
   // box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-between;
-  // align-items: center;
+  align-items: center;
+  padding-left: 30px;
+
 }
 
 .show-picture {
@@ -21,16 +23,20 @@
 
 .show-box-info {
   padding-right: 16px;
+  padding-left: 30px;
 }
 
 .show-box-info h1 {
   font-size: 60px;
+  padding-left: 30px;
 }
 
 .show-box-info h2 {
   font-size: 35px;
+  padding-left: 30px;
 }
 
 .show-box-info p {
   font-size: 18px;
+  padding-left: 30px;
 }

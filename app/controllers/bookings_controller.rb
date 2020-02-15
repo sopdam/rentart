@@ -13,7 +13,8 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(params[:id])
+    # @booking = Booking.new(params[:id])
+    @booking = Booking.find(booking_params)
     authorize @booking
     if @booking.save
       redirect_to booking_path(@booking)
@@ -23,8 +24,7 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    @booking = Booking.find(params[:id])
-    authorize @booking
+
   end
 
   def update
