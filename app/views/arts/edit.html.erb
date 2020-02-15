@@ -3,9 +3,9 @@
     <%= f.input :title %>
     <%= f.input :artist %>
     <%= f.input :description %>
-    <%= f.input :dimensions %>
+    <%= f.input :dimensions, label: "Dimensions - (width cm) x (hight cm)" %>
     <%= f.input :city %>
-    <%= f.input :price %>
+    <%= f.input :price, label: "Price ($) per month"%>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Save", class: "btn-navigation" %>
   <% end %>
